@@ -8,7 +8,7 @@
 <title>상품 리스트</title>
 </head>
 <body>
-<%-- 	<table>
+	<table>
 		<tr>
 			<th>상품번호</th>
 			<th>상품이름</th>
@@ -23,7 +23,7 @@
 				<td><c:out value="${product.getProductStock()}"></c:out></td>
 			</tr>
 		</c:forEach>
-	</table> --%>
+	</table>
 </body>
 <script type="text/javascript">
 	const products = JSON.parse(`${productsJSON}`)
@@ -31,12 +31,17 @@
 	console.log(products)
 	console.log(table)
 	
-	products.forEach((product) => {
+ 	products.forEach((product) => {
 		console.log(product.id)
 		table.innerHTML += (
-			product.id		
-		)
-	})
+ 			"<tr>" +
+ 				"<td>" + product.id + "</td>" +
+ 				"<td>" + product.productName + "</td>" +
+ 				"<td>" + product.productPrice + "</td>" +
+ 				"<td>" + product.productStock + "</td>" +
+ 			"</tr>"
+ 		)
+	}) 
 </script>
 
 </html>
