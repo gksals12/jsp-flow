@@ -8,6 +8,15 @@
 	<select id="selectAll" resultType="ProductVO">
 		SELECT ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_STOCK
 		FROM TBL_PRODUCT
-		ORDER BY ID DESC
+	</select>
+	<update id="update" parameterType="ProductVO">
+		UPDATE TBL_PRODUCT 
+		SET PRODUCT_NAME = #{productName}, PRODUCT_PRICE = #{productPrice}, PRODUCT_STOCK = #{productStock}
+		WHERE ID = #{id}
+	</update>
+	<select id="select" parameterType="Long" resultType="ProductVO">
+		SELECT ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_STOCK
+		FROM TBL_PRODUCT
+		WHERE ID = #{id}
 	</select>
 </mapper>

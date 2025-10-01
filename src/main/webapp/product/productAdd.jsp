@@ -12,9 +12,9 @@
 			<span>상품이름</span>
 			<input name="productName" />
 		</div>
+		<div>
 			<span>샹품가격</span>
 			<input name="productPrice" />
-		<div>
 		</div>
 		<div>
 			<span>상품재고</span>

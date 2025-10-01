@@ -13,6 +13,7 @@
 			<a href="/flow/add.product">상품등록</a>
 			<a href="/flow/list.product">상품리스트</a>
 			<a href="/flow/edit.product">상품수정</a>
+			<a href="/flow/list.order">주문내역</a>
 			<a href="/flow/logout-ok.member">로그아웃</a>
 		</c:when>
 		<c:otherwise>

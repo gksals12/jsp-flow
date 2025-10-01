@@ -19,12 +19,12 @@ public class ProductListController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		ProductDAO productDAO = new ProductDAO();
-		JSONArray productsJSON = new JSONArray();
+		JSONArray products = new JSONArray();
 		
-		req.setAttribute("products", productDAO.selectAll());
-		productDAO.selectAll().stream().map(JSONObject::new).forEach(productsJSON::put);
-		req.setAttribute("productsJSON", productsJSON);
-		result.setPath("/productList.jsp");
+		/* req.setAttribute("products", productDAO.selectAll()); */
+		productDAO.selectAll().stream().map(JSONObject::new).forEach(products::put);
+		req.setAttribute("products", products);
+		result.setPath("/product/productList.jsp");
 		return result;
 	}
 

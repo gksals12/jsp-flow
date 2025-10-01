@@ -1,4 +1,4 @@
-package com.app.product.controller;
+package com.app.order.controller;
 
 import java.io.IOException;
 
@@ -9,12 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.Action;
 import com.app.Result;
 
-public class ProductAddController implements Action {
+public class OrderWriteCompleteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath("/product/productAdd.jsp");
+		result.setPath("/product/write_complete.jsp");
 		return result;
 	}
 
